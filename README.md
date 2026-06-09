@@ -12,7 +12,7 @@ A VHDL implementation of a 16-bit multi-cycle RISC processor using the Harvard a
 * **Memories (Harvard Architecture):** Separate `ITCM` for instruction code and `DTCM` for data storage.
 * **Control Unit (FSM):** The multi-cycle state machine routing the control signals.
 
-## 📐 Hardware Diagrams
+## Hardware Diagrams
 
 ### 1. Quartus RTL View
 The top-level block diagram from Intel Quartus showing the system abstractions and connections:
