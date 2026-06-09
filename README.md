@@ -29,7 +29,7 @@ The multi-cycle state transitions of the Control Unit:
 
 ![FSM State Diagram](FSM.png)
 
-## 🗂️ Instruction Set Summary
+## Instruction Set Summary
 
 | Mnemonic | Opcode | Description |
 | :--- | :---: | :--- |
