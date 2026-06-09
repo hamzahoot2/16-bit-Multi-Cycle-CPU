@@ -2,11 +2,15 @@
 
 A VHDL implementation of a 16-bit multi-cycle RISC processor using the Harvard architecture (separate instruction memory ITCM and data memory DTCM). The design uses a single central bus to route data efficiently between components, keeping the hardware footprint small.
 
-## 🛠️ Main Optimizations
+##  Core Components
 
-* **Shared Adder:** Merged duplicate arithmetic logic so that a single adder handles both data operations and flag generation.
-* **4-bit Opcode Bus:** Replaced a wide 12-wire instruction bus with a clean 4-bit connection between the DataPath and Control Unit.
-* **Direct Pass-Through:** Removed redundant multiplexers by using a pass-through state in the ALU for move instructions.
+* **Central 16-bit Bus:** The single data highway connecting all internal blocks.
+* **ALU:** Handles arithmetic/logic operations and outputs the `C`, `Z`, `N`, and `V` status flags.
+* **OPC Decoder:** Strips the 4-bit opcode (`IR[15:12]`) to drive the Control Unit.
+* **Register File (RF):** Internal register storage for active operands.
+* **Staging Registers:** `PC`, `IR`, `Reg_A`, `Reg_C`, and `ADDR_Reg` to hold data between execution clock cycles.
+* **Memories (Harvard Architecture):** Separate `ITCM` for instruction code and `DTCM` for data storage.
+* **Control Unit (FSM):** The multi-cycle state machine routing the control signals.
 
 ## 📐 Hardware Diagrams
 
