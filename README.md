@@ -15,7 +15,7 @@ This design contains critical hardware-level enhancements aimed at maximizing re
 ### 1. Quartus RTL Netlist View
 Synthesized gate-level representation of the architecture interconnections generated dynamically by Intel Quartus:
 
-![Quartus RTL Viewer](top.png)
+![Quartus RTL Viewer](top.jpg)
 
 ### 2. DataPath Architecture
 The processing layout tracks a central vertical bus structure, decoupling internal execution entities from the external validation lines:
